@@ -1,14 +1,34 @@
 # braille-pattern-cli-loading-indicator [![CircleCI](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator.svg?style=svg)](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator) [![NPM Version](http://img.shields.io/npm/v/braille-pattern-cli-loading-indicator.svg?style=flat)](https://www.npmjs.org/package/braille-pattern-cli-loading-indicator)
 
-Command line loading indicator using Unicode braille patterns (based on Heroku CLI).
+Animated command line loading indicator using Unicode braille patterns (based on Heroku CLI).
 
-`size: 'large'` with static color ([see example code](https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/colors.js)):
-
-<img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample.gif" height="24">
-
-`size: 'small'` with multiple colors ([see example code](https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/rainbow.js)):
-
-<img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample2.gif" height="24">
+<table>
+  <thead>
+    <tr>
+      <th>size</th>
+      <th>preview</th>
+      <th>sample code</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>large</td>
+    <td>
+      <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample.gif" height="24">
+    </td>
+    <td>
+      <a href="https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/colors.js">examples/colors.js</a>
+    </td>
+  </tr>
+  <tr>
+    <td>small</td>
+    <td>
+      <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample2.gif" height="24">
+    </td>
+    <td>
+      <a href="https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/rainbow.js">examples/rainbow.js</a>
+    </td>
+  </tr>
+</table>
 
 # usage
 
