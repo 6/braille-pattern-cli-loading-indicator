@@ -33,6 +33,9 @@ function LoadingIndicator (attributes) {
   this.interval = attributes.interval || 70
   this.cursor = ansi(process.stdout)
   this.format = attributes.format || function (pattern) { return pattern }
+  if (attributes.rotation === 'cw') {
+    this.patterns.reverse()
+  }
 }
 
 LoadingIndicator.prototype.start = function () {

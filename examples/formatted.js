@@ -5,6 +5,7 @@ const LoadingIndicator = require('../index')
 
 let loadingIndicator = new LoadingIndicator({
   size: 'large',
+  rotation: 'cw',
   format: function (pattern) {
     return chalk.blue('➜') + ' connecting ' + chalk.green(pattern)
   }

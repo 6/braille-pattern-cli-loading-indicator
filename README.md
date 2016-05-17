@@ -6,12 +6,14 @@ Animated command line loading indicator using Unicode braille patterns (based on
   <thead>
     <tr>
       <th>size</th>
+      <th>rotation</th>
       <th>preview</th>
       <th>sample code</th>
     </tr>
   </thead>
   <tr>
     <td>large</td>
+    <td>cw</td>
     <td>
       <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample.gif" height="24">
     </td>
@@ -21,6 +23,7 @@ Animated command line loading indicator using Unicode braille patterns (based on
   </tr>
   <tr>
     <td>small</td>
+    <td>ccw</td>
     <td>
       <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample2.gif" height="24">
     </td>
@@ -33,6 +36,7 @@ Animated command line loading indicator using Unicode braille patterns (based on
 # usage
 
 - Use `start()` and `stop()` to enable or disable the loading indicator.
+- Optionally specify `rotation` as `cw` (clockwise) or `ccw` (counterclockwise)
 - Optionally provide a custom `format` function to add text or colors for the loading indicator.
 
 ```javascript
@@ -41,6 +45,7 @@ const LoadingIndicator = require('braille-pattern-cli-loading-indicator')
 
 let loadingIndicator = new LoadingIndicator({
   size: 'large',
+  rotation: 'cw',
   format: function (pattern) {
     return 'charging plasma cannon ' + pattern
   }

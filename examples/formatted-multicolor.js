@@ -14,6 +14,7 @@ const colors = [
 
 let loadingIndicator = new LoadingIndicator({
   size: 'small',
+  rotation: 'ccw',
   format: function (pattern, i) {
     let color = colors[i]
     return chalk.blue('➜') + ' connecting ' + chalk[color](pattern)
