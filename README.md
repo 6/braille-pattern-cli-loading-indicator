@@ -2,7 +2,7 @@
 
 Command line loading indicator using Unicode braille patterns (based on Heroku CLI).
 
-`size: 'large'` with static colors ([see example code](https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/colors.js)):
+`size: 'large'` with static color ([see example code](https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/colors.js)):
 
 <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample.gif" height="24">
 
