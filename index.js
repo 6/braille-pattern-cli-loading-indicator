@@ -38,7 +38,7 @@ function LoadingIndicator (attributes) {
 
 LoadingIndicator.prototype.start = function () {
   let self = this
-  const readlineInterface = readline.createInterface({
+  this.readlineInterface = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   })
@@ -50,7 +50,7 @@ LoadingIndicator.prototype.start = function () {
 
   this._loadingInterval = setInterval(function () {
     resetLineAndCursor()
-    readlineInterface.output.write(self.text + self.patterns[i])
+    self.readlineInterface.output.write(self.text + self.patterns[i])
 
     if (i < self.patterns.length - 1) {
       i++
@@ -64,6 +64,7 @@ LoadingIndicator.prototype.stop = function () {
   resetLineAndCursor()
   cursor.reset()
   cursor.show()
+  this.readlineInterface.close()
   if (this._loadingInterval) {
     clearInterval(this._loadingInterval)
     this._loadingInterval = null
