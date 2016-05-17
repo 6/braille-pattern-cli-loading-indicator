@@ -15,7 +15,7 @@ Animated command line loading indicator using Unicode braille patterns (based on
     <td>large</td>
     <td>cw</td>
     <td>
-      <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample.gif" height="24">
+      <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample.gif" width="177">
     </td>
     <td>
       <a href="https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/formatted.js">examples/formatted.js</a>
@@ -25,7 +25,7 @@ Animated command line loading indicator using Unicode braille patterns (based on
     <td>small</td>
     <td>ccw</td>
     <td>
-      <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample2.gif" height="24">
+      <img src="https://raw.githubusercontent.com/6/braille-pattern-cli-loading-indicator/master/examples/sample2.gif" width="177">
     </td>
     <td>
       <a href="https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/formatted-multicolor.js">examples/formatted-multicolor.js</a>
