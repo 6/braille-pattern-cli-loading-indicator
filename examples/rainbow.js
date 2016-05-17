@@ -16,7 +16,7 @@ let loadingIndicator = new LoadingIndicator({
   size: 'small',
   format: function (pattern, i) {
     let color = colors[i]
-    return chalk.blue('➜') +' connecting ' + chalk[color](pattern)
+    return chalk.blue('➜') + ' connecting ' + chalk[color](pattern)
   }
 })
 loadingIndicator.start()
