@@ -1,6 +1,6 @@
-# braille-pattern-cli-loading-indicator
+# braille-pattern-cli-loading-indicator [![CircleCI](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator.svg?style=svg)](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator)
 
-Command line loading indicator using braille patterns (based on Heroku CLI)
+Command line loading indicator using braille patterns (based on Heroku CLI).
 
 `size: 'large'` with static colors ([see example code](https://github.com/6/braille-pattern-cli-loading-indicator/blob/master/examples/colors.js)):
 
