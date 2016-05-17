@@ -1,4 +1,4 @@
-# braille-pattern-cli-loading-indicator [![CircleCI](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator.svg?style=svg)](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator)
+# braille-pattern-cli-loading-indicator [![CircleCI](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator.svg?style=svg)](https://circleci.com/gh/6/braille-pattern-cli-loading-indicator) [![NPM Version](http://img.shields.io/npm/v/braille-pattern-cli-loading-indicator.svg?style=flat)](https://www.npmjs.org/package/braille-pattern-cli-loading-indicator)
 
 Command line loading indicator using Unicode braille patterns (based on Heroku CLI).
 
