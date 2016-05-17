@@ -50,13 +50,9 @@ let loadingIndicator = new LoadingIndicator({
     return 'charging plasma cannon ' + pattern
   }
 })
-
+// Display loading indicator for 5 seconds, and then stop.
 loadingIndicator.start()
-
-setTimeout(function () {
-  loadingIndicator.stop()
-  console.log('done 💥')
-}, 5000)
+setTimeout(function () { loadingIndicator.stop() }, 5000)
 ```
 
 # credits
