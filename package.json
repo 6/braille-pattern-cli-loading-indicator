@@ -1,6 +1,6 @@
 {
   "name": "braille-pattern-cli-loading-indicator",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "CLI loading indicator using braille patterns",
   "main": "index.js",
   "scripts": {
