@@ -37,27 +37,16 @@ function LoadingIndicator (attributes) {
 }
 
 LoadingIndicator.prototype.start = function () {
-  let self = this
   this.readlineInterface = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   })
-  let i = 0
   this.cursor.hide()
   if (this.color) {
     this.cursor.hex(this.color)
   }
-
-  this._loadingInterval = setInterval(function () {
-    resetLineAndCursor()
-    self.readlineInterface.output.write(self.text + self.patterns[i])
-
-    if (i < self.patterns.length - 1) {
-      i++
-    } else {
-      i = 0
-    }
-  }, this.interval)
+  this.patternIndex = 0
+  this._loadingInterval = setInterval(animate.bind(this), this.interval)
 }
 
 LoadingIndicator.prototype.stop = function () {
@@ -68,6 +57,16 @@ LoadingIndicator.prototype.stop = function () {
   if (this._loadingInterval) {
     clearInterval(this._loadingInterval)
     this._loadingInterval = null
+  }
+}
+
+function animate () {
+  resetLineAndCursor()
+  this.readlineInterface.output.write(this.text + this.patterns[this.patternIndex])
+  if (this.patternIndex < this.patterns.length - 1) {
+    this.patternIndex++
+  } else {
+    this.patternIndex = 0
   }
 }
 
