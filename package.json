@@ -8,7 +8,13 @@
     "preversion": "npm test",
     "postversion": "npm publish && git push && git push --tags"
   },
-  "author": "",
+  "author": "Peter Graham",
+  "repository": "6/braille-pattern-cli-loading-indicator",
+  "keywords": [
+    "braille",
+    "loading",
+    "cli"
+  ],
   "license": "MIT",
   "devDependencies": {
     "chalk": "^1.1.3",
