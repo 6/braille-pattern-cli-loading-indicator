@@ -4,16 +4,16 @@
   "description": "CLI loading indicator using braille patterns",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT",
-  "scripts": {
     "test": "standard",
     "preversion": "npm test",
     "postversion": "npm publish && git push && git push --tags"
   },
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
     "standard": "^7.1.0"
+  },
+  "dependencies": {
+    "ansi": "^0.3.1"
   }
 }

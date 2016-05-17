@@ -1,7 +1,14 @@
-var loading = require('./index')
-var interval = loading('large')
+'use strict'
 
+const LoadingIndicator = require('./index')
+let loadingIndicator = new LoadingIndicator({
+  size: 'large',
+  text: 'connecting ',
+  color: '#33cc33'
+})
+
+loadingIndicator.start()
 setTimeout(function () {
-  clearInterval(interval)
+  loadingIndicator.stop()
   console.log('Done.')
 }, 5000)
