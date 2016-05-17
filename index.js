@@ -46,7 +46,7 @@ LoadingIndicator.prototype.start = function () {
     this.cursor.hex(this.color)
   }
   this.patternIndex = 0
-  this._loadingInterval = setInterval(animate.bind(this), this.interval)
+  this._animationInterval = setInterval(animate.bind(this), this.interval)
 }
 
 LoadingIndicator.prototype.stop = function () {
@@ -54,9 +54,9 @@ LoadingIndicator.prototype.stop = function () {
   this.cursor.reset()
   this.cursor.show()
   this.readlineInterface.close()
-  if (this._loadingInterval) {
-    clearInterval(this._loadingInterval)
-    this._loadingInterval = null
+  if (this._animationInterval) {
+    clearInterval(this._animationInterval)
+    this._animationInterval = null
   }
 }
 
