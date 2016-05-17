@@ -36,4 +36,4 @@ setTimeout(function () {
 
 # credits
 
-heavily inspired by [heroku cli](https://github.com/heroku/heroku)
+heavily inspired by [heroku cli](https://github.com/heroku/heroku) loading indicator
