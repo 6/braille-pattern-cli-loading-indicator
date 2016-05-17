@@ -2,7 +2,6 @@
 
 const readline = require('readline')
 const ansi = require('ansi')
-const cursor = ansi(process.stdout)
 
 // Braille patterns from:
 // http://symbolcodes.tlt.psu.edu/bylanguage/braillechart.html
@@ -34,6 +33,7 @@ function LoadingIndicator (attributes) {
   this.interval = attributes.interval || 70
   this.text = attributes.text || ''
   this.color = attributes.color
+  this.cursor = ansi(process.stdout)
 }
 
 LoadingIndicator.prototype.start = function () {
@@ -43,9 +43,9 @@ LoadingIndicator.prototype.start = function () {
     output: process.stdout
   })
   let i = 0
-  cursor.hide()
+  this.cursor.hide()
   if (this.color) {
-    cursor.hex(this.color)
+    this.cursor.hex(this.color)
   }
 
   this._loadingInterval = setInterval(function () {
@@ -62,8 +62,8 @@ LoadingIndicator.prototype.start = function () {
 
 LoadingIndicator.prototype.stop = function () {
   resetLineAndCursor()
-  cursor.reset()
-  cursor.show()
+  this.cursor.reset()
+  this.cursor.show()
   this.readlineInterface.close()
   if (this._loadingInterval) {
     clearInterval(this._loadingInterval)
