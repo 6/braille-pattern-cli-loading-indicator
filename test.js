@@ -1,8 +1,7 @@
-var loading = require('./index');
+var loading = require('./index')
+var interval = loading('large')
 
-var interval = loading('large');
-
-setTimeout(function() {
-  clearInterval(interval);
-  console.log("Done.")
-}, 5000);
+setTimeout(function () {
+  clearInterval(interval)
+  console.log('Done.')
+}, 5000)

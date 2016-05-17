@@ -1,47 +1,48 @@
-"use strict";
+'use strict'
 
-const readline = require('readline');
+const readline = require('readline')
 
 // Braille patterns from:
 // http://symbolcodes.tlt.psu.edu/bylanguage/braillechart.html
 const PATTERNS = {
   small: [
-    "⠟",
-    "⠯",
-    "⠷",
-    "⠾",
-    "⠽",
-    "⠻"
+    '⠟',
+    '⠯',
+    '⠷',
+    '⠾',
+    '⠽',
+    '⠻'
   ],
   large: [
-    "⡿",
-    "⣟",
-    "⣯",
-    "⣷",
-    "⣾",
-    "⣽",
-    "⣻",
-    "⢿"
+    '⡿',
+    '⣟',
+    '⣯',
+    '⣷',
+    '⣾',
+    '⣽',
+    '⣻',
+    '⢿'
   ]
-};
+}
 
-module.exports = function(size, interval) {
+module.exports = function (size, interval) {
   const readlineInterface = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-  });
-  const patterns = PATTERNS[size];
-  interval = interval || 50;
-  let i = 0;
+  })
+  const patterns = PATTERNS[size]
+  interval = interval || 50
+  let i = 0
 
-  return setInterval(function() {
-    readline.clearLine(process.stdout, 0);
-    readline.cursorTo(process.stdout, 0);
-    readlineInterface.output.write(patterns[i]);
+  return setInterval(function () {
+    readline.clearLine(process.stdout, 0)
+    readline.cursorTo(process.stdout, 0)
+    readlineInterface.output.write(patterns[i])
+
     if (i < patterns.length - 1) {
-      i++;
+      i++
     } else {
-      i = 0;
+      i = 0
     }
-  }, interval);
-};
+  }, interval)
+}
