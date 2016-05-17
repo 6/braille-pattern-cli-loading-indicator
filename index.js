@@ -57,7 +57,7 @@ LoadingIndicator.prototype.stop = function () {
 
 function animate () {
   resetLineAndCursor()
-  this.readlineInterface.output.write(this.format(this.patterns[this.patternIndex]))
+  this.readlineInterface.output.write(this.format(this.patterns[this.patternIndex], this.patternIndex))
   if (this.patternIndex < this.patterns.length - 1) {
     this.patternIndex++
   } else {
