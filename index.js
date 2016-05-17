@@ -31,9 +31,8 @@ function LoadingIndicator (attributes) {
   this.size = attributes.size || 'large'
   this.patterns = PATTERNS[this.size]
   this.interval = attributes.interval || 70
-  this.text = attributes.text || ''
-  this.color = attributes.color
   this.cursor = ansi(process.stdout)
+  this.format = attributes.format || function (pattern) { return pattern }
 }
 
 LoadingIndicator.prototype.start = function () {
@@ -42,16 +41,12 @@ LoadingIndicator.prototype.start = function () {
     output: process.stdout
   })
   this.cursor.hide()
-  if (this.color) {
-    this.cursor.hex(this.color)
-  }
   this.patternIndex = 0
   this._animationInterval = setInterval(animate.bind(this), this.interval)
 }
 
 LoadingIndicator.prototype.stop = function () {
   resetLineAndCursor()
-  this.cursor.reset()
   this.cursor.show()
   this.readlineInterface.close()
   if (this._animationInterval) {
@@ -62,7 +57,7 @@ LoadingIndicator.prototype.stop = function () {
 
 function animate () {
   resetLineAndCursor()
-  this.readlineInterface.output.write(this.text + this.patterns[this.patternIndex])
+  this.readlineInterface.output.write(this.format(this.patterns[this.patternIndex]))
   if (this.patternIndex < this.patterns.length - 1) {
     this.patternIndex++
   } else {
